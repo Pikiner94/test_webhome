@@ -104,6 +104,7 @@ export function hello() {
   console.log('Привет');
 }
 
-const num = 1;
+/////////////////////////////// Пытаюсь понять как экспортить
 
+const num = 1;
 export { num };

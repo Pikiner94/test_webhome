@@ -1,5 +1,8 @@
 import { hello } from '../index';
 
+import { num } from '../index';
+console.log(num);
+
 hello();
 
 const filter = document.querySelectorAll('.filter');
