@@ -1,0 +1,89 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
+  \**************************************************************************************************************/
+@charset "UTF-8";
+.review__comments {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.review__input {
+  text-indent: 10px;
+  height: 200px;
+  width: 100%;
+  background-color: #f4f4f4;
+  outline-color: grey;
+  border-radius: 6px;
+  border: 2px rgba(8, 8, 4, 0.2) solid;
+  padding-top: 10px;
+  resize: none;
+}
+.review__input:focus {
+  outline: none;
+}
+.review__wrapper {
+  padding-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.review__wrapper .button {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #182dcc;
+  width: 120px;
+  height: 35px;
+}
+
+.comment {
+  padding-top: 150px;
+}
+.comment__headers {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 9px;
+}
+.comment__wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.comment__item {
+  border-top: 2px rgba(8, 8, 4, 0.3) solid;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.comment__item .wrapper {
+  display: flex;
+}
+.comment__item .img {
+  width: 80px;
+}
+.comment__item .heards {
+  color: red;
+  padding: 0 20px;
+}
+.comment__item .heards::before {
+  content: "❤ ";
+  color: red;
+}
+.comment__item .text {
+  width: 700px;
+}
+.comment__item .text .name {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.comment__item .date {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+html {
+  font-family: Inter;
+}

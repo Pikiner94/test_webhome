@@ -1,0 +1,33 @@
+.review {
+  &__comments {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  &__input {
+    text-indent: 10px;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(244, 244, 244);
+    outline-color: grey;
+    border-radius: 6px;
+    border: 2px rgba(8, 8, 4, 0.2) solid;
+    padding-top: 10px;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__wrapper {
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    .button {
+      border-radius: 5px;
+      border: none;
+      color: white;
+      background-color: rgb(24, 45, 204);
+      width: 120px;
+      height: 35px;
+    }
+  }
+}

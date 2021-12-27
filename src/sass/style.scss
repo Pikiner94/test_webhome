@@ -1,0 +1,13 @@
+@import './block/input.scss';
+@import './block/comment.scss';
+@import './block/pagination.scss';
+
+.container {
+  width: 950px;
+  margin: 0 auto;
+}
+
+html {
+  font-family: 'Inter';
+  font-weight: 500;
+}
