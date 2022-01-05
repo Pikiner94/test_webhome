@@ -2,17 +2,15 @@ import '../sass/style.scss';
 import { filterComment } from './component/filter';
 import { createResponse } from './component/responses';
 import { createComment } from './component/comment';
+import { createPug } from './component/pagination';
 let url = 'https://jordan.ashton.fashion/api/goods/30/comments?page=1';
-const list = document.querySelector('.pagination__list');
-
-// const filter = document.querySelectorAll('.filter');
 
 function getData(url) {
   fetch(url)
     .then((response) => {
       return response.json();
     })
-    .then(({ data, total }) => {
+    .then(({ data, total, next_page_url, prev_page_url }) => {
       let createArray = data.map(({ name, text, created_at }) => {
         return {
           name: name,
@@ -21,32 +19,13 @@ function getData(url) {
           created_at: created_at,
         };
       });
-      // createPug(createArray);
       createComment(createArray);
       createResponse(total);
       filterComment(createArray);
+      createPug(createArray, next_page_url, prev_page_url);
     });
 }
 
-function createPug(data) {
-  list.innerHTML = '';
-  let current_page = data.current_page;
-  let numPag = [1, 2, 3, 4];
-  numPag.forEach((elem) => {
-    const li = document.createElement('li');
-    li.className = 'item';
-    li.innerText = elem;
-    list.append(li);
-  });
-
-  let modifPag = numPag.map((elem) => {
-    return current_page++;
-  });
-}
-
-// list.addEventListener('click', (e) => {
-//   url = `https://jordan.ashton.fashion/api/goods/30/comments?page=${e.target.innerText}`;
-//   getData(url);
-// });
-
 getData(url);
+
+export { getData };

@@ -1,6 +1,12 @@
 .pagination {
   display: flex;
   justify-content: center;
+
+  &__next,
+  &__prev {
+    padding: 10px 10px;
+    border: 1px black solid;
+  }
   &__list {
     .item {
       padding: 10px 10px;
@@ -10,15 +16,5 @@
     }
     display: flex;
     list-style: none;
-    &::after {
-      padding: 10px 10px;
-      content: '>';
-      border: 1px black solid;
-    }
-    &::before {
-      content: '<';
-      padding: 10px 10px;
-      border: 1px black solid;
-    }
   }
 }
